@@ -1,9 +1,9 @@
-<!DOCTYPE html >
+п»ї<!DOCTYPE html >
 <html lang="ru" >
 <head >
 <meta charset="UTF-8" >
 <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-<title > Резюме Якимов Илья</title >
+<title > Р РµР·СЋРјРµ РЇРєРёРјРѕРІ РР»СЊСЏ</title >
 <style >
 :root {
     --primary: #3498db;
@@ -41,6 +41,26 @@ header {
     margin-bottom: 40px;
     border-bottom: 2px solid var(--primary);
     padding-bottom: 20px;
+    position: relative;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.fashion-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 h1 {
@@ -54,6 +74,7 @@ h2 {
     margin: 25px 0 15px;
     padding-bottom: 8px;
     border-bottom: 1px solid #eee;
+    scroll-margin-top: 20px;
 }
 
 .contact-info {
@@ -106,6 +127,27 @@ footer {
     color: #777;
 }
 
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+    .nav-link:hover {
+        background-color: var(--primary);
+        color: white;
+    }
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -116,10 +158,25 @@ footer {
         font-size: 2rem;
     }
 
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .fashion-image {
+        width: 150px;
+    }
+
     .contact-info {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
     }
 }
 
@@ -128,71 +185,97 @@ footer {
 <body >
 <div class="container" >
 <header >
-<h1 > Якимов Илья</h1 >
-<div class="contact-info" >
+
+
+<h1 > РЇРєРёРјРѕРІ РР»СЊСЏ</h1 >
+
+<nav class="nav-menu" >
+<a href="#about" class="nav-link" > Рћ СЃРµР±Рµ</a >
+<a href="#strengths" class="nav-link" > РЎРёР»СЊРЅС‹Рµ СЃС‚РѕСЂРѕРЅС‹</a >
+<a href="#education" class="nav-link" > РћР±СЂР°Р·РѕРІР°РЅРёРµ</a >
+<a href="#english" class="nav-link" > РђРЅРіР»РёР№СЃРєРёР№</a >
+<a href="#contacts" class="nav-link" > РљРѕРЅС‚Р°РєС‚С‹</a >
+</nav >
+
+<div class="contact-info" id="contacts" >
 <div class="contact-item" >
-<span > ??</span >
+<span > рџ“±</span >
 <span > +375 (28) 321-38</span >
 </div >
 <div class="contact-item" >
-<span > ??</span >
+<span > вњ‰пёЏ</span >
 <a href="mailto:lodyrevivanuska@gmail.com" > lodyrevivanuska@gmail.com</a >
 </div >
 <div class="contact-item" >
-<span > ??</span >
+<span > рџ’»</span >
 <a href="https://github.com/Ilya26072006" target="_blank" > github.com/Ilya26072006</a >
 </div >
 <div class="contact-item" >
-<span > ??</span >
+<span > рџ“Ё</span >
 <a href="https://t.me/username" target="_blank" > @username</a >
 </div >
 </div >
 </header >
 
-<section class="section" >
-<h2 > О себе</h2 >
-<p > <strong > Цель:</strong > стать профессиональным разработчиком, работать над интересными проектами и постоянно развиваться.</p >
-<p > <strong > Приоритеты:</strong > </p >
+<section class="section" id="about" >
+<h2 > Рћ СЃРµР±Рµ</h2 >
+<p > <strong > Р¦РµР»СЊ:</strong > СЃС‚Р°С‚СЊ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рј СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРј, СЂР°Р±РѕС‚Р°С‚СЊ РЅР°Рґ РёРЅС‚РµСЂРµСЃРЅС‹РјРё РїСЂРѕРµРєС‚Р°РјРё Рё РїРѕСЃС‚РѕСЏРЅРЅРѕ СЂР°Р·РІРёРІР°С‚СЊСЃСЏ.</p >
+<p > <strong > РџСЂРёРѕСЂРёС‚РµС‚С‹:</strong > </p >
 <ul style="margin-left: 20px; margin-top: 10px;" >
-<li > Изучение современных технологий и best practices</li >
-<li > Участие в реальных проектах для набора опыта</li >
-<li > Работа в команде с опытными коллегами</li >
+<li > РР·СѓС‡РµРЅРёРµ СЃРѕРІСЂРµРјРµРЅРЅС‹С… С‚РµС…РЅРѕР»РѕРіРёР№ Рё best practices</li >
+<li > РЈС‡Р°СЃС‚РёРµ РІ СЂРµР°Р»СЊРЅС‹С… РїСЂРѕРµРєС‚Р°С… РґР»СЏ РЅР°Р±РѕСЂР° РѕРїС‹С‚Р°</li >
+<li > Р Р°Р±РѕС‚Р° РІ РєРѕРјР°РЅРґРµ СЃ РѕРїС‹С‚РЅС‹РјРё РєРѕР»Р»РµРіР°РјРё</li >
 </ul >
+<!-- Р”РѕР±Р°РІР»РµРЅРѕ РёР·РѕР±СЂР°Р¶РµРЅРёРµ Givenchy -->
+<img src="5287746457190921294.jpg" alt="Givenchy FW22" class="fashion-image" >
+<p style="text-align: center; font-style: italic; color: #666;" > Givenchy FW22 - Stimplicity term</p >
 </section >
 
-<section class="section" >
-<h2 > Сильные стороны</h2 >
+<section class="section" id="strengths" >
+<h2 > РЎРёР»СЊРЅС‹Рµ СЃС‚РѕСЂРѕРЅС‹</h2 >
 <div class="strengths" >
 <div class="strength-item" >
-<strong > Аналитическое мышление</strong >
-<p > Умение разбираться в сложных задачах</p >
+<strong > РђРЅР°Р»РёС‚РёС‡РµСЃРєРѕРµ РјС‹С€Р»РµРЅРёРµ</strong >
+<p > РЈРјРµРЅРёРµ СЂР°Р·Р±РёСЂР°С‚СЊСЃСЏ РІ СЃР»РѕР¶РЅС‹С… Р·Р°РґР°С‡Р°С…</p >
 </div >
 <div class="strength-item" >
-<strong > Обучаемость</strong >
-<p > Готовность учиться и быстро осваивать новые технологии</p >
+<strong > РћР±СѓС‡Р°РµРјРѕСЃС‚СЊ</strong >
+<p > Р“РѕС‚РѕРІРЅРѕСЃС‚СЊ СѓС‡РёС‚СЊСЃСЏ Рё Р±С‹СЃС‚СЂРѕ РѕСЃРІР°РёРІР°С‚СЊ РЅРѕРІС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё</p >
 </div >
 <div class="strength-item" >
-<strong > Личные качества</strong >
-<p > Ответственность, внимательность к деталям</p >
+<strong > Р›РёС‡РЅС‹Рµ РєР°С‡РµСЃС‚РІР°</strong >
+<p > РћС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚СЊ, РІРЅРёРјР°С‚РµР»СЊРЅРѕСЃС‚СЊ Рє РґРµС‚Р°Р»СЏРј</p >
 </div >
 </div >
 </section >
 
-<section class="section" >
-<h2 > Образование</h2 >
-<p > <strong > Университет:</strong > ВГУ Имени Машерова</p >
-<p > <strong > Факультет:</strong > ФМИИТ</p >
-<p > <strong > Год окончания:</strong > 2028</p >
+<section class="section" id="education" >
+<h2 > РћР±СЂР°Р·РѕРІР°РЅРёРµ</h2 >
+<p > <strong > РЈРЅРёРІРµСЂСЃРёС‚РµС‚:</strong > Р’Р“РЈ РРјРµРЅРё РњР°С€РµСЂРѕРІР°</p >
+<p > <strong > Р¤Р°РєСѓР»СЊС‚РµС‚:</strong > Р¤РњРРРў</p >
+<p > <strong > Р“РѕРґ РѕРєРѕРЅС‡Р°РЅРёСЏ:</strong > 2028</p >
 </section >
 
-<section class="section" >
-<h2 > Английский язык</h2 >
-<p > Уровень: B1 (Intermediate)</p >
+<section class="section" id="english" >
+<h2 > РђРЅРіР»РёР№СЃРєРёР№ СЏР·С‹Рє</h2 >
+<p > РЈСЂРѕРІРµРЅСЊ: B1 (Intermediate)</p >
 </section >
 
 <footer >
-<p > © 2025 Резюме Якимова Ильи</p >
+<p > В© 2025 Р РµР·СЋРјРµ РЇРєРёРјРѕРІР° РР»СЊРё</p >
+<p > <a href="#top" style="color: var(--primary); text-decoration: none;" > в†‘ РќР°РІРµСЂС…</a > </p >
 </footer >
 </div >
+
+<script >
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+</script >
 </body >
 </html >
