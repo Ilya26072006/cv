@@ -54,6 +54,7 @@
             margin: 25px 0 15px;
             padding-bottom: 8px;
             border-bottom: 1px solid #eee;
+            scroll-margin-top: 20px; /* Добавлено для плавного скролла */
         }
 
         .contact-info {
@@ -106,6 +107,28 @@
             color: #777;
         }
 
+        /* Стили для навигационного меню */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+            .nav-link:hover {
+                background-color: var(--primary);
+                color: white;
+            }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -121,6 +144,12 @@
                 align-items: flex-start;
                 gap: 10px;
             }
+
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
         }
     </style>
 </head>
@@ -128,7 +157,16 @@
     <div class="container">
         <header>
             <h1>Якимов Илья</h1>
-            <div class="contact-info">
+            <!-- Навигационное меню с якорными ссылками -->
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">О себе</a>
+                <a href="#strengths" class="nav-link">Сильные стороны</a>
+                <a href="#education" class="nav-link">Образование</a>
+                <a href="#english" class="nav-link">Английский</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="contact-info" id="contacts">
                 <div class="contact-item">
                     <span>📱</span>
                     <span>+375 (28) 321-38</span>
@@ -148,7 +186,7 @@
             </div>
         </header>
 
-        <section class="section">
+        <section class="section" id="about">
             <h2>О себе</h2>
             <p><strong>Цель:</strong> стать профессиональным разработчиком, работать над интересными проектами и постоянно развиваться.</p>
             <p><strong>Приоритеты:</strong></p>
@@ -159,7 +197,7 @@
             </ul>
         </section>
 
-        <section class="section">
+        <section class="section" id="strengths">
             <h2>Сильные стороны</h2>
             <div class="strengths">
                 <div class="strength-item">
@@ -177,21 +215,34 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="education">
             <h2>Образование</h2>
             <p><strong>Университет:</strong> ВГУ Имени Машерова</p>
             <p><strong>Факультет:</strong> ФМИИТ</p>
             <p><strong>Год окончания:</strong> 2028</p>
         </section>
 
-        <section class="section">
+        <section class="section" id="english">
             <h2>Английский язык</h2>
             <p>Уровень: B1 (Intermediate)</p>
         </section>
 
         <footer>
             <p>© 2025 Резюме Якимова Ильи</p>
+            <p><a href="#top" style="color: var(--primary); text-decoration: none;">↑ Наверх</a></p>
         </footer>
     </div>
+
+    <script>
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
