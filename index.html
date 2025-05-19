@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме Якимов Илья</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .fashion-image {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--dark);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            scroll-margin-top: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .contact-item a {
+                color: var(--dark);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .contact-item a:hover {
+                    color: var(--primary);
+                }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .strengths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .strength-item {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+            .nav-link:hover {
+                background-color: var(--primary);
+                color: white;
+            }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .fashion-image {
+                width: 150px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+
+            <h1>Якимов Илья</h1>
+
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">О себе</a>
+                <a href="#strengths" class="nav-link">Сильные стороны</a>
+                <a href="#education" class="nav-link">Образование</a>
+                <a href="#english" class="nav-link">Английский</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="contact-info" id="contacts">
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+375 (28) 321-38</span>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <a href="mailto:lodyrevivanuska@gmail.com">lodyrevivanuska@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>💻</span>
+                    <a href="https://github.com/Ilya26072006" target="_blank">github.com/Ilya26072006</a>
+                </div>
+                <div class="contact-item">
+                    <span>📨</span>
+                    <a href="https://t.me/username" target="_blank">@username</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="section" id="about">
+            <h2>О себе</h2>
+            <p><strong>Цель:</strong> стать профессиональным разработчиком, работать над интересными проектами и постоянно развиваться.</p>
+            <p><strong>Приоритеты:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Изучение современных технологий и best practices</li>
+                <li>Участие в реальных проектах для набора опыта</li>
+                <li>Работа в команде с опытными коллегами</li>
+            </ul>
+
+            <!-- Добавлено изображение Givenchy -->
+            <img src="5287746457190921294.jpg" alt="Givenchy FW22" class="fashion-image">
+            <p style="text-align: center; font-style: italic; color: #666;">Givenchy FW22 - Stimplicity term</p>
+        </section>
+
+        <section class="section" id="strengths">
+            <h2>Сильные стороны</h2>
+            <div class="strengths">
+                <div class="strength-item">
+                    <strong>Аналитическое мышление</strong>
+                    <p>Умение разбираться в сложных задачах</p>
+                </div>
+                <div class="strength-item">
+                    <strong>Обучаемость</strong>
+                    <p>Готовность учиться и быстро осваивать новые технологии</p>
+                </div>
+                <div class="strength-item">
+                    <strong>Личные качества</strong>
+                    <p>Ответственность, внимательность к деталям</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <h2>Образование</h2>
+            <p><strong>Университет:</strong> ВГУ Имени Машерова</p>
+            <p><strong>Факультет:</strong> ФМИИТ</p>
+            <p><strong>Год окончания:</strong> 2028</p>
+        </section>
+
+        <section class="section" id="english">
+            <h2>Английский язык</h2>
+            <p>Уровень: B1 (Intermediate)</p>
+        </section>
+
+        <footer>
+            <p>© 2025 Резюме Якимова Ильи</p>
+            <p><a href="#top" style="color: var(--primary); text-decoration: none;">↑ Наверх</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
